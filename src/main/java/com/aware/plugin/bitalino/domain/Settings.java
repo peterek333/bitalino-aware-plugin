@@ -1,4 +1,4 @@
-package com.aware.plugin.bitalino;
+package com.aware.plugin.bitalino.domain;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,11 +11,13 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
 import com.aware.Aware;
+import com.aware.plugin.bitalino.Plugin;
+import com.aware.plugin.bitalino.R;
 
 import java.util.Set;
 import java.util.TreeSet;
 
-import static com.aware.plugin.bitalino.AwareStartReceiver.INTERNAL_BITALINO_WORK;
+import static com.aware.plugin.bitalino.domain.AwareStartReceiver.INTERNAL_BITALINO_WORK;
 
 public class Settings extends PreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 

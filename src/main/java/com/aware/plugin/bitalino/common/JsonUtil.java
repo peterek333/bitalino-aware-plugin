@@ -1,4 +1,4 @@
-package com.aware.plugin.bitalino;
+package com.aware.plugin.bitalino.common;
 
 import com.bitalino.comm.BITalinoFrame;
 import com.google.gson.Gson;

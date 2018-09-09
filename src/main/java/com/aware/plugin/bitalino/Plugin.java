@@ -5,9 +5,12 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import com.aware.Aware;
 import com.aware.Aware_Preferences;
+import com.aware.plugin.bitalino.domain.AwareStartReceiver;
+import com.aware.plugin.bitalino.domain.bitalino.AsyncBITalinoConnect;
+import com.aware.plugin.bitalino.domain.Settings;
 import com.aware.utils.Aware_Plugin;
 
-import static com.aware.plugin.bitalino.AwareStartReceiver.INTERNAL_BITALINO_WORK;
+import static com.aware.plugin.bitalino.domain.AwareStartReceiver.INTERNAL_BITALINO_WORK;
 
 public class Plugin extends Aware_Plugin {
 

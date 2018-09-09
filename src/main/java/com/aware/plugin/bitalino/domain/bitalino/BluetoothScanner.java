@@ -1,4 +1,4 @@
-package com.aware.plugin.bitalino;
+package com.aware.plugin.bitalino.domain.bitalino;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

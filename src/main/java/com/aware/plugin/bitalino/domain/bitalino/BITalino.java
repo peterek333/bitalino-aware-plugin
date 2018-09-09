@@ -1,7 +1,8 @@
-package com.aware.plugin.bitalino;
+package com.aware.plugin.bitalino.domain.bitalino;
 
 import android.bluetooth.BluetoothSocket;
 
+import com.aware.plugin.bitalino.domain.Settings;
 import com.bitalino.comm.BITalinoDevice;
 import com.bitalino.comm.BITalinoException;
 import com.bitalino.comm.BITalinoFrame;

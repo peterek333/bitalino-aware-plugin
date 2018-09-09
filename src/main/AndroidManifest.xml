@@ -19,7 +19,7 @@
             android:label="AWARE: Plugin Template" />
 
         <activity
-            android:name="com.aware.plugin.bitalino.Settings"
+            android:name="com.aware.plugin.bitalino.domain.Settings"
             android:exported="true" />
 
     </application>

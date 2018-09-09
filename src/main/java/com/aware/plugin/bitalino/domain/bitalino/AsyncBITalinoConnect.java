@@ -1,11 +1,11 @@
-package com.aware.plugin.bitalino;
+package com.aware.plugin.bitalino.domain.bitalino;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 
+import com.aware.plugin.bitalino.common.JsonUtil;
 import com.bitalino.comm.BITalinoFrame;
-import com.google.gson.Gson;
 
 public class AsyncBITalinoConnect extends AsyncTask<Void, String, Void> {
     private static final String SEND_FRAMES_ACTION = "pl.agh.broadcast.FRAMES";

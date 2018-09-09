@@ -1,11 +1,11 @@
 # BITalino Aware plugin
 Plugin allows to collect BITalino data and propagate in device for another apps by broadcast receiver.
 
-[How install](How-install)<br/>
-[How connect to device by plugin](How-connect-to-device-by-plugin)<br/>
-[How configure connection to device](How-configure-connection-to-device)<br/>
-[How listen by client](How-listen-by-client)<br/>
-[Plugin settings](Plugin-settings)<br/>
+[How install](#how-install)<br/>
+[How connect to device by plugin](#how-connect-to-device-by-plugin)<br/>
+[How configure connection to device](#how-configure-connection-to-device)<br/>
+[Plugin settings](#plugin-settings)<br/>
+[How listen by client](#how-listen-by-client)<br/>
 
 ### How install
 1. Download and install [Aware Framework](http://www.awareframework.com/)
@@ -26,10 +26,40 @@ Plugin allows to collect BITalino data and propagate in device for another apps 
 1. Set BITalino MAC Address
 2. Choose channels - *TIP: If you disable channel - BITalino will always send on this place zero value*
 
-### How listen by client
-
 ### Plugin settings
 To change value click on:<br/>
 **Start/stop plugin** - Start/stop connection to BITalino device<br/>
 **MAC** - MAC Address BITalino device - *eg. 20:16:12:XX:XX:XX*<br/>
 **Channels** - Which channels you want to collect<br/>
+
+### How listen by client
+Create in your app [BroadcastReceiver](https://developer.android.com/guide/components/broadcasts)<br/>
+action name: **pl.agh.broadcast.FRAMES**<br/>
+[Example](#broadcast-example)<br/>
+
+### Broadcast example
+**Import dependencies in gradle**
+```gradle
+dependencies {
+    implementation 'com.bitalino:bitalino-java-sdk:1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+}
+```
+**Java code**
+```java
+class FramesReceiver extends BroadcastReceiver {
+  @Override
+  public void onReceive(final Context context, final Intent intent) {
+    if("pl.agh.broadcast.FRAMES".equalsIgnoreCase(intent.getAction())) {
+      String rawFrames = intent.getStringExtra("frames"));
+      BITalinoFrame[] frames = new Gson().fromJson(rawFrames);
+      
+      //do what you want with frames
+    }
+  }
+}
+
+//register broadcast eg. in Activity
+framesReceiver = new FramesReceiver();
+registerReceiver(framesReceiver, new IntentFilter("pl.agh.broadcast.FRAMES"));
+```

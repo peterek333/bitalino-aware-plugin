@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BITalino</string>
+    <string name="plugin_template">Plugin: Template</string>
+</resources>

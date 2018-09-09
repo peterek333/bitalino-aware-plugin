@@ -1,0 +1,1 @@
+# BITalino Aware plugin

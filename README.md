@@ -10,7 +10,7 @@ Plugin allows to collect BITalino data and propagate in device for another apps 
 
 ### How install
 1. Download and install [Aware Framework](http://www.awareframework.com/)
-2. Download repository and open in Android Studio
+2. Clone this repository and open in Android Studio
 3. Deploy app to smartphone (just by run application) - *Aware framework should detect and install new plugin*
 
 ### How connect to device by plugin

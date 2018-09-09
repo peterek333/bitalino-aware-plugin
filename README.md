@@ -6,6 +6,7 @@ Plugin allows to collect BITalino data and propagate in device for another apps 
 [How configure connection to device](#how-configure-connection-to-device)<br/>
 [Plugin settings](#plugin-settings)<br/>
 [How listen by client](#how-listen-by-client)<br/>
+[Client example](#broadcast-example)<br/>
 
 ### How install
 1. Download and install [Aware Framework](http://www.awareframework.com/)
@@ -38,14 +39,14 @@ action name: **pl.agh.broadcast.FRAMES**<br/>
 [Example](#broadcast-example)<br/>
 
 ### Broadcast example
-**Import dependencies in gradle**
+*Import dependencies in gradle*
 ```gradle
 dependencies {
     implementation 'com.bitalino:bitalino-java-sdk:1.0'
     implementation 'com.google.code.gson:gson:2.8.5'
 }
 ```
-**Java code**
+*Java code*
 ```java
 class FramesReceiver extends BroadcastReceiver {
   @Override
